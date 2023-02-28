@@ -7,11 +7,12 @@ from deepface import DeepFace
 data_dir = "faces"
 smallest_distance = None
 
-for directory in os.listdir(data_dir):
-    first_file = os.listdir(os.path.join(data_dir, directory))[0]
-    shutil.copyfile(os.path.join(data_dir, directory, first_file), os.path.join("Samples", f"{directory}".jpg))
+#for directory in os.listdir(data_dir):
+    #first_file = os.listdir(os.path.join(data_dir, directory))[0]
+    #shutil.copyfile(os.path.join(data_dir, directory, first_file), os.path.join("Samples", f"{directory}".jpg))
 
-result = DeepFace.verify("billy_bur.jpeg", f"samples/bill_bur.jpeg")
+result = DeepFace.verify("faces/billy_bur.jpeg", "samples/bill_bur.jpeg")
+print(result)
 
 ## need data set for this guy
 #for file in os.listdir("Samples"):
